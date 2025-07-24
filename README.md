@@ -1,64 +1,82 @@
-🔗 Live Site https://quick-ai-app-ashy.vercel.app/
-🚀 QuickAI – All-in-One AI Platform
-QuickAI is a powerful all-in-one AI platform designed to help users generate content and edit images effortlessly. Whether you're writing blogs, generating visuals, editing photos, or reviewing resumes – QuickAI has all tools bundled into one seamless experience.
+[🔗 Live Site](https://quick-ai-app-ashy.vercel.app/)  
+# 🚀 QuickAI – All-in-One AI Platform
 
-✨ Features
-🔹 Article & Blog Generator
-Easily generate high-quality articles and blog titles using AI.
+QuickAI is a powerful all-in-one AI platform designed to help users **generate content and edit images effortlessly**. Whether you're writing blogs, generating visuals, editing photos, or reviewing resumes – QuickAI brings everything together into one seamless experience.
 
-🔹 Image Generator
-Create stunning AI-generated images in seconds.
+---
 
-🔹 Background Remover
-Remove image backgrounds instantly with a single click.
+## ✨ Features
 
-🔹 Object Remover
-Erase unwanted objects from any image with precision.
+- 🔹 **Article & Blog Generator**  
+  Generate high-quality articles and blog titles using AI.
 
-🔹 Resume Review
-Upload your resume and get AI-based improvement suggestions.
+- 🔹 **Image Generator**  
+  Create stunning AI-generated images within seconds.
 
-🔹 Community Page
-Explore a public gallery of user-generated AI images.
+- 🔹 **Background Remover**  
+  Remove image backgrounds instantly with one click.
 
-🔹 Dashboard
-Manage your tools, creations, and activity in a clean interface.
+- 🔹 **Object Remover**  
+  Erase unwanted objects from any image easily.
 
-🔹 Authentication & Payments
-Secure login via Clerk and Stripe payment integration for premium access.
+- 🔹 **Resume Review**  
+  Upload your resume and get AI-powered improvement suggestions.
 
-🖼️ Screenshots
+- 🔹 **Community Page**  
+  Explore a public gallery showcasing user-generated AI images.
 
+- 🔹 **Dashboard**  
+  Manage your tools and creations in a clean and intuitive interface.
 
-🔐 Login & Authentication
+- 🔹 **Authentication & Payment Integration**  
+  Secure login with Clerk and seamless payment support via Stripe.
 
-📝 Article Generator
+---
 
-🎨 AI Image Generator
+## 🖼️ Screenshots
 
-🧼 Background Remover
+> 📌 Place your screenshots in the `assets/` folder or replace the paths with direct image URLs.
 
-✂️ Object Remover
+### 🔐 Login & Authentication  
+![Login](assets/login.png)
 
-📄 Resume Review
+### 📝 Article Generator  
+![Article Generator](assets/article-generator.png)
 
-🌐 Community Page
+### 🎨 AI Image Generator  
+![Image Generator](assets/image-generator.png)
 
-📊 Dashboard
+### 🧼 Background Remover  
+![Background Remover](assets/background-remover.png)
 
-📦 Tech Stack
-Frontend: React.js
+### ✂️ Object Remover  
+![Object Remover](assets/object-remover.png)
 
-Backend: Node.js & Express
+### 📄 Resume Review  
+![Resume Review](assets/resume-review.png)
 
-Auth: Clerk
+### 🌐 Community Page  
+![Community](assets/community.png)
 
-Payments: Stripe
+### 📊 Dashboard  
+![Dashboard](assets/dashboard.png)
 
-Image Hosting: Cloudinary
+---
 
-Styling: Tailwind CSS
+## 📦 Tech Stack
 
-💡 About QuickAI
-QuickAI is built to empower creators, professionals, and entrepreneurs with cutting-edge AI tools — all accessible in one platform. Whether you're a content writer, designer, job seeker, or simply exploring AI, QuickAI helps you create smarter and faster.
+- **Frontend**: React.js  
+- **Backend**: Node.js & Express  
+- **Authentication**: Clerk  
+- **Payments**: Stripe  
+- **Image Hosting**: Cloudinary  
+- **Styling**: Tailwind CSS
+
+---
+
+## 💡 About QuickAI
+
+QuickAI is built to **empower creators, professionals, and entrepreneurs** by offering a suite of intelligent AI tools all in one place. Whether you're writing content, enhancing images, or managing digital assets — QuickAI simplifies your workflow and helps you achieve more in less time.
+
+---
 
