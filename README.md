@@ -1,5 +1,5 @@
 live :- https://quick-ai-app-ashy.vercel.app/
-\n
+"\n"
 QuickAI – All-in-One AI Platform 🚀
 QuickAI is a powerful all-in-one AI-powered platform designed to help users create and manage content with ease. From article and blog generation to advanced image editing, QuickAI brings together a complete suite of tools to simplify your creative workflow.
 
