@@ -1,4 +1,4 @@
-🔗 Live Site
+🔗 Live Site https://quick-ai-app-ashy.vercel.app/
 🚀 QuickAI – All-in-One AI Platform
 QuickAI is a powerful all-in-one AI platform designed to help users generate content and edit images effortlessly. Whether you're writing blogs, generating visuals, editing photos, or reviewing resumes – QuickAI has all tools bundled into one seamless experience.
 
