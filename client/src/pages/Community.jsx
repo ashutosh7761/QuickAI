@@ -79,11 +79,14 @@ const Community = () => {
                 {creation.prompt}
               </p>
               <div className="flex gap-1 items-center">
-                <p>{Array.isArray(creation.likes) ? creation.likes.length : 0}</p>
+                <p>
+                  {Array.isArray(creation.likes) ? creation.likes.length : 0}
+                </p>
                 <Heart
                   onClick={() => imageLikeToggle(creation.id)}
                   className={`min-w-5 h-5 hover:scale-110 cursor-pointer ${
-                    Array.isArray(creation.likes) && creation.likes.includes(user.id)
+                    Array.isArray(creation.likes) &&
+                    creation.likes.includes(user.id)
                       ? "fill-red-500 text-red-600"
                       : "text-white"
                   }`}
