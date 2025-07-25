@@ -31,22 +31,23 @@ const Community = () => {
 
   const imageLikeToggle = async (id) => {
     try {
-      const { data } = await axios.post("/api/user/toggle-like-creation", {id},{
-        headers: { Authorization: `Bearer ${await getToken()}` },
-      })
+      const { data } = await axios.post(
+        "/api/user/toggle-like-creation",
+        { id },
+        {
+          headers: { Authorization: `Bearer ${await getToken()}` },
+        }
+      );
       if (data.success) {
-        toast.success(data.message)
-        await fetchCreations()
-      }
-      else{
-         toast.error(data.message)
+        toast.success(data.message);
+        await fetchCreations();
+      } else {
+        toast.error(data.message);
       }
     } catch (error) {
-       toast.error(error.message)
+      toast.error(error.message);
     }
-  }
-
-
+  };
 
   useEffect(() => {
     if (user) {
@@ -54,7 +55,7 @@ const Community = () => {
     }
   }, [user]);
 
-  return !loading ?  (
+  return !loading ? (
     <div className="flex-1 h-full flex flex-col gap-4 p-6">
       Creations
       <div className="bg-white h-full w-full rounded-xl overflow-y-scroll flex flex-wrap gap-4">
@@ -78,10 +79,11 @@ const Community = () => {
                 {creation.prompt}
               </p>
               <div className="flex gap-1 items-center">
-                <p>{creation.likes.length}</p>
-                <Heart onClick={()=> imageLikeToggle(creation.id)}
+                <p>{Array.isArray(creation.likes) ? creation.likes.length : 0}</p>
+                <Heart
+                  onClick={() => imageLikeToggle(creation.id)}
                   className={`min-w-5 h-5 hover:scale-110 cursor-pointer ${
-                    creation.likes?.includes(user.id)
+                    Array.isArray(creation.likes) && creation.likes.includes(user.id)
                       ? "fill-red-500 text-red-600"
                       : "text-white"
                   }`}
@@ -96,7 +98,7 @@ const Community = () => {
     <div className="flex justify-center items-center h-full">
       <span className="w-10 h-10 my-1 rounded-full border-3 border-primary border-t-transparent animate-spin"></span>
     </div>
-  )
+  );
 };
 
 export default Community;

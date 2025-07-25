@@ -1,3 +1,4 @@
+
 import sql from "../configs/db.js";
 
 export const getUserCreations = async (req, res) => {
@@ -13,10 +14,8 @@ export const getUserCreations = async (req, res) => {
   }
 };
 
-
 export const getPublishedCreations = async (req, res) => {
   try {
-
     const creations =
       await sql`SELECT * FROM creations WHERE publish = true ORDER BY created_at DESC;`;
 
@@ -26,8 +25,7 @@ export const getPublishedCreations = async (req, res) => {
   }
 };
 
-
-// liek or dislike any creations
+// like or dislike any creations
 export const toggleLikeCreation = async (req, res) => {
   try {
     const { userId } = req.auth();
@@ -38,7 +36,19 @@ export const toggleLikeCreation = async (req, res) => {
       return res.json({ success: false, message: "Creation not found" });
     }
 
-    const currentLikes = creation.likes || [];
+    // Always ensure likes is an array
+    let currentLikes = creation.likes;
+    if (!Array.isArray(currentLikes)) {
+      if (currentLikes === null || currentLikes === undefined) {
+        currentLikes = [];
+      } else if (typeof currentLikes === "string") {
+        // If likes is a string (shouldn't happen, but just in case)
+        currentLikes = [currentLikes];
+      } else {
+        currentLikes = [];
+      }
+    }
+
     const userIdStr = userId.toString();
     let updatedLikes, message;
 
@@ -50,12 +60,10 @@ export const toggleLikeCreation = async (req, res) => {
       message = "Creation liked";
     }
 
-    
-   await sql`UPDATE creations SET likes = ${formattedArray}::text[] WHERE id = ${id}`;
+    await sql`UPDATE creations SET likes = ${updatedLikes} WHERE id = ${id}`;
 
-    res.json({ success: true, message });
+    res.json({ success: true, message, likes: updatedLikes });
   } catch (error) {
     res.json({ success: false, message: error.message });
   }
 };
-
